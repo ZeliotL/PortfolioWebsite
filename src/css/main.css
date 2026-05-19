@@ -448,6 +448,7 @@ svg{
   .more-about {
     margin-top: 2rem;
     padding: 1rem 3.5rem;
+      width: 80%;
   }
 
   .more-about h2 {
