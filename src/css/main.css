@@ -68,8 +68,10 @@ nav {
   align-items: center;
   justify-content: space-between;
   padding: 1.5rem 3.5rem;
-  background-color: var(--bg-color);
-  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  background-color: var(--card-bg-color);
+  border: solid var(--card-highlight);
+  border-width: 0px 0px 1px 0px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
 }
 
 nav h1 {
@@ -109,17 +111,25 @@ nav ul li {
 }
 
 
+/* waves text */
 
-/* bigshot one font */
-@import url(https://fonts.googleapis.com/css?family=Cabin+Condensed);
-
-svg{
-  font-weight:bold;
+.svg-container{
+  position: relative;
+  display: block;
+  align-items: center;
+  align-content: center;
+  width: 80%;
   margin: 2rem;
-  max-height: 100px;
-  width: 100%;
+  text-align: center;
 }
 
+svg{
+  /* display: inline; */
+  font-weight:bold;
+  max-height: 100px;
+  width: 100%;
+  /* text-align: justify; */
+}
 
 
 
@@ -129,8 +139,8 @@ svg{
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 2.5rem;
-    max-width: 68.75rem;
+    /* gap: 2.5rem; */
+    max-width: 100%;
     margin: auto;
 }
 
@@ -157,8 +167,10 @@ svg{
 
 /* More about */
 .more-about {
+  display: block;
   background-color: var(--bg-color);
-  padding: 1rem 6rem;
+  width: 30%;
+  margin: 3rem auto;
 }
 
 .more-about h2 {
@@ -169,6 +181,7 @@ svg{
 .more-about p {
   line-height: var(--line-height);
   padding: 0.4rem;
+  text-align: center;
 }
 
 
@@ -178,7 +191,7 @@ svg{
 .projects {
   background-color: var(--bg-color);
   padding: 32px 0;
-  margin-top: 2rem;
+  /* margin-top: 2rem; */
 }
 
 .project-pic {
@@ -248,6 +261,7 @@ svg{
 }
 
 .contact-form-container {
+  display: flex;
   background: linear-gradient(5deg, #141414 0%, var(--card-bg-color) 65%, var(--card-highlight) 100%);
   max-width: 40.75rem;
   margin: 0 auto;
@@ -255,10 +269,20 @@ svg{
   border-radius: 25px;
   box-shadow: 0 0 20px var(--secondary-shadow);
   border: #4e2496 1px solid;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .contact-form-container *{
   background: transparent;
+}
+
+.contact-form-container div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem;
 }
 
 .contact-form-container div h3{
@@ -359,18 +383,18 @@ svg{
 
 /* videon stuff */
 .showreel{
-    position: relative;
-    top: 2rem;
-    width: 30rem;
-    margin: 25px;
+    position: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    background: rgb(17, 17, 17);
 }
 .showreel-video{
-    width: 100%;
-    border-radius: 1vw;
-    border-style: dashed;
-    border-width: 5px;
-    border-color: var(--primary-color);
-    box-shadow: 0px 2px 15px 2px var(--primary-shadow);
+    width: 50%;
+    margin: 2rem;
+    border-radius: 0.75rem;
+    /* box-shadow: 0px 0px 5px 0px var(--primary-shadow); */
 }
 
 @media screen and (max-width: 720px) {
@@ -402,15 +426,18 @@ svg{
     transform: translateX(0);
   }
 
-  .hero {
+  /* .hero {
     margin-top: -4rem;
     flex-direction: column;
-    gap: 0;
-  }
+    gap: 8rem;
+  } */
 
   .showreel {
-        width: 30rem;
-        /* margin: 0px 0px 200px; */
+        width: 100%;
+    }
+
+    .showreel-video{
+      width: 85%;
     }
 
   .bio {
