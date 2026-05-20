@@ -8,6 +8,13 @@
 </head>
 <body>
 
+    <!-- Overlay -->
+    <div id="overlay" onclick="cardOverlayHide()">
+        <embed src="index.html"
+		 type="text/html" />
+    </div>
+
+
     <!-- Navbar -->
     <nav>
       <h1>Elliot Lundgren</h1>
@@ -64,6 +71,9 @@
     </section>
 
 
+    
+
+
     <!-- previous work section -->
 
 <section class="projects" id="projects">
@@ -77,6 +87,7 @@
                 loading="lazy"
                 class="project-pic"
                 />
+                img
                 <p class="project-details">
                 A dark fantasy VR game made out of real clay figures, won several awards throughout 2025.
                 <br><br>
@@ -90,6 +101,7 @@
         </div>
     </section>
 
+    
     <!-- Projects section -->
     <section class="projects" id="projects">
         <h2 class="projects-title">Some of my Recent Projects</h2>
@@ -136,7 +148,8 @@
                 This Unity VR program trains workers with the various tools and 
                 machinery needed to create stickers and then deliver them.
                 </p>
-                <!-- <a href="#" target="_blank" class="project-link">Check it Out</a> -->
+                <button onclick="cardOverlayShow()" class="submit-btn">Check it Out</button>
+                <!-- <a onclick="cardOverlayShow" target="_blank" class="project-link">Check it Out</a> -->
             </div>
         </div>
     </section>
@@ -148,18 +161,18 @@
       <div class="contact-form-container">
             <div>
                 <ion-icon name="mail" size="large"></ion-icon>
-                <h3></ion-icon> Email</h3><br>
+                <h3>Email</h3><br>
                 <a href="mailto:elliotlundgren.business@gmail.com">
                     elliotlundgren.business@gmail.com</a>
             </div>
             <div>
                 <ion-icon name="logo-linkedin" size="large"></ion-icon>
-                <h3> Linkedin</ion-icon></h3><br>
+                <h3> Linkedin</h3><br>
                 <a href="www.linkedin.com/in/elliotlundgren">Link to my profile</a>
             </div>
             <div>
                 <ion-icon name="call" size="large"></ion-icon>
-                <h3> Phone</h3><br>
+                <h3>Phone</h3><br>
                 <a href="tel:+46709440664">0709440664</a>
             </div>
       </div>

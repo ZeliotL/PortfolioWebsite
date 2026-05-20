@@ -18,3 +18,12 @@ navLink.forEach((link) =>
     ul.classList.remove("show");
   })
 );
+
+
+function cardOverlayShow(){
+  document.getElementById("overlay").style.display = "block";
+}
+
+function cardOverlayHide(){
+  document.getElementById("overlay").style.display = "none";
+}
