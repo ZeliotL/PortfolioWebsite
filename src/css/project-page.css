@@ -1,0 +1,48 @@
+/* project page */
+.project-page{
+  /* width: 95%; */
+  padding: 1rem;
+}
+.project-page *{
+  /* padding-top: 0.5rem; */
+}
+.project-about{
+  display: flex;
+  flex-direction: column;
+}
+.project-about *{
+  display: flex;
+  width: 100%;
+}
+.project-about > p{
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.project-about > h1{
+  margin-bottom: 0;
+}
+.about-image{
+  /* width: 100%; */
+  /* margin: 1rem; */
+}
+.about-details{
+  display: flex;
+}
+.about-header{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.details-container{
+  padding: 5px;
+  border-radius: 1rem;
+  border: 5px solid var(--card-highlight);
+}
+.details-container div{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.project-content{
+  padding: 1rem;
+}

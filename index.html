@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="src/css/main.css">
+    <link rel="stylesheet" href="/src/css/main.css">
     <title>Document</title>
 </head>
 <body>
 
     <!-- Overlay -->
     <div id="overlay" onclick="cardOverlayHide()">
-        <embed src="index.html"
+        <embed id="overlay-embed" src=""
 		 type="text/html" />
     </div>
 
@@ -87,7 +87,6 @@
                 loading="lazy"
                 class="project-pic"
                 />
-                img
                 <p class="project-details">
                 A dark fantasy VR game made out of real clay figures, won several awards throughout 2025.
                 <br><br>
@@ -118,6 +117,10 @@
                 A group project where we present what a bioprinter is, how its used
                 in a proffesional environment and what problems it solves
                 </p>
+                <!-- <button 
+                    onclick="cardOverlayShow('src/html/project-pages/bioprinter-project.html')"
+                    class="submit-btn">Check it Out
+                </button> -->
                 <!-- <a href="#" target="_blank" class="project-link">Check it Out</a> -->
             </div>
             <div class="project-container project-card">
@@ -134,6 +137,10 @@
                 its using a custom shader I invented to fake 
                 pearls moving around in the tea
                 </p>
+                <!-- <button 
+                    onclick="cardOverlayShow('src/html/project-pages/stickerprogram.html')"
+                    class="submit-btn">Check it Out
+                </button> -->
                 <!-- <a href="#" target="_blank" class="project-link">Check it Out</a> -->
             </div>
             <div class="project-container project-card">
@@ -148,7 +155,10 @@
                 This Unity VR program trains workers with the various tools and 
                 machinery needed to create stickers and then deliver them.
                 </p>
-                <button onclick="cardOverlayShow()" class="submit-btn">Check it Out</button>
+                <!-- <button 
+                    onclick="cardOverlayShow('src/html/project-pages/stickerprogram.html')"
+                    class="submit-btn">Check it Out
+                </button> -->
                 <!-- <a onclick="cardOverlayShow" target="_blank" class="project-link">Check it Out</a> -->
             </div>
         </div>
@@ -168,7 +178,7 @@
             <div>
                 <ion-icon name="logo-linkedin" size="large"></ion-icon>
                 <h3> Linkedin</h3><br>
-                <a href="www.linkedin.com/in/elliotlundgren">Link to my profile</a>
+                <a href="https://www.linkedin.com/in/elliotlundgren">Link to my profile</a>
             </div>
             <div>
                 <ion-icon name="call" size="large"></ion-icon>

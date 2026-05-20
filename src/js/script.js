@@ -20,8 +20,9 @@ navLink.forEach((link) =>
 );
 
 
-function cardOverlayShow(){
+function cardOverlayShow(projectPage){
   document.getElementById("overlay").style.display = "block";
+  document.getElementById("overlay-embed").src = projectPage;
 }
 
 function cardOverlayHide(){
