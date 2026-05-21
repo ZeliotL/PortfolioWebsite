@@ -25,7 +25,9 @@ html {
   background: var(--bg-color);
 }
 
+/*  */
 /* CSS Resets */
+/*  */
 * {
   color: var(--text-color);
   background-color: var(--bg-color);
@@ -34,57 +36,54 @@ html {
   box-sizing: border-box;
   background: inherit;
 }
-
 ul {
   list-style-type: none;
 }
-
 a {
   text-decoration: none;
   color: var(--primary-color);
 }
-
 a:hover {
   color: var(--secondary-color);
 }
-
 body {
   font-family: var(--font-family);
 }
-
 p {
   color: var(--paragraph-color);
 }
-
 img,
 video {
   border-radius: 15px;
 }
 
+/*  */
 /* overlay */
-
+/*  */
 #overlay {
-  position: fixed; /* Sit on top of the page content */
-  display: none; /* Hidden by default */
-  width: 100%; /* Full width (cover the whole page) */
-  height: 100%; /* Full height (cover the whole page) */
+  position: fixed;
+  display: none;
+  width: 100%; 
+  height: 100%; 
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
-  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
-  cursor: pointer; /* Add a pointer on hover */
+  background-color: rgba(0, 0, 0, 0.5); 
+  z-index: 2; 
+  cursor: pointer; 
+  transition: all 1s;
 }
-
 #overlay :last-child {
   border-radius: 15px;
-  width: 80%;
+  width: 50%;
   height: 90%;
   margin: auto;
 }
 
+/*  */
 /* nagivation banner */
+/*  */
 nav {
   position: sticky;
   top: 0;
@@ -99,30 +98,19 @@ nav {
   border-width: 0px 0px 1px 0px;
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
 }
-
-nav h1 {
-  color: var(--primary-color);
-}
-
-nav a {
+nav * {
   color: var(--primary-color);
   transition: var(--transition);
 }
-
 nav a:hover {
   color: var(--secondary-color);
   border-bottom: 2px solid var(--secondary-color);
 }
-
 nav ul {
   display: flex;
   gap: 1.9rem;
-}
-
-nav ul li {
   font-weight: var(--bold-font);
 }
-
 .burger-menu {
   color: var(--primary-color);
   font-size: 2rem;
@@ -131,67 +119,31 @@ nav ul li {
   cursor: pointer;
   display: none;
 }
-
-.bars {
-  color: var(--primary-color);
+.bars:hover{
+  color: var(--secondary-color);
 }
-
-
-/* waves text */
-.svg-container {
-  position: relative;
-  display: block;
-  align-items: center;
-  align-content: center;
-  width: 80%;
-  margin: 2rem;
-  text-align: center;
-}
-
-svg {
-  /* display: inline; */
-  font-weight: bold;
-  max-height: 100px;
-  width: 100%;
-  /* text-align: justify; */
-}
-
-
-
-
 
 /*  */
-/* Hero section */
+/* video stuff */
 /*  */
-.hero {
-  display: flex;
+.showreel {
+  position: flex;
   align-items: center;
   justify-content: center;
-  /* gap: 2.5rem; */
-  max-width: 100%;
-  margin: auto;
+  text-align: center;
+  width: 100%;
+  background: rgb(17, 17, 17);
+}
+.showreel-video {
+  width: 50%;
+  margin: 2rem;
 }
 
-.bio {
-  width: 25rem;
-  padding: 0.625rem;
-  border-radius: 6px;
-  box-shadow: 0px 2px 15px 2px var(--primary-shadow);
-  background-color: var(--card-bg-color);
-  margin: 10px;
-  border: var(--card-highlight) 1px solid;
-}
 
-.bio h1 {
-  margin-bottom: var(--bottom-margin);
-}
 
-.bio p {
-  line-height: var(--line-height);
-  padding: 0.3rem 0;
-}
-
+/*  */
 /* More about */
+/*  */
 .more-about {
   display: block;
   background-color: var(--bg-color);
@@ -210,7 +162,14 @@ svg {
   text-align: center;
 }
 
+
+
+
+
+
+/*  */
 /* projects */
+/*  */
 .projects {
   background-color: var(--bg-color);
   padding: 32px 0;
@@ -243,9 +202,6 @@ svg {
   padding: 0.4rem;
 }
 
-.project-container a {
-}
-
 .project-title {
   margin-bottom: var(--bottom-margin);
 }
@@ -262,8 +218,28 @@ svg {
   margin: 10px;
   border: var(--card-highlight) 1px solid;
 }
+.project-button {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 2px solid var(--primary-color);
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: var(--bold-font);
+  transition: var(--transition);
+  z-index: 10;
+}
+.project-button:hover {
+  background: var(--primary-color);
+  border: 2px solid var(--primary-color);
+  cursor: pointer;
+  color: black;
+}
 
+
+/*  */
 /* contact me section */
+/*  */
 .contact {
   margin-top: 2rem;
   margin-bottom: 2rem;
@@ -319,102 +295,15 @@ svg {
   border-bottom: 2px solid var(--secondary-color);
 }
 
-.contact-form-container label {
-  line-height: 2.7em;
-  font-weight: var(--bold-font);
-  color: var(--primary-color);
-}
 
-.contact-form-container textarea {
-  min-height: 6.25rem;
-  font-size: 14px;
-}
 
-.contact-form-container .input-field {
-  width: 100%;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  border-radius: 5px;
-  border: none;
-  border: 2px outset var(--primary-color);
-  font-size: 0.875rem;
-  outline: none;
-}
 
-.input-field::placeholder {
-  padding: 0.5rem;
-  color: var(--primary-color);
-}
 
-.submit-btn {
-  width: 100%;
-  padding: 10px;
-  margin: 10px 0;
-  border: 2px solid var(--primary-color);
-  border-radius: 5px;
-  font-size: 1rem;
-  font-weight: var(--bold-font);
-  transition: var(--transition);
-  z-index: 10;
-}
 
-/* .submit-btn-div{
-    width: 100%;
-    margin: 10px 0;
-    background: transparent;
-    border: 2px solid var(--primary-color);
-    border-radius: 5px;
-    font-size: 1rem;
-    font-weight: var(--bold-font);
-    transition: var(--transition);
-} */
 
-.submit-btn:hover {
-  background: var(--primary-color);
-  border: 2px solid var(--primary-color);
-  cursor: pointer;
-  color: black;
-}
-
-/* .submit-btn-div .submit-btn:hover{
-  background: linear-gradient(to top, red, green);
-  border: 2px solid var(--primary-color);
-  cursor: pointer;
-} */
-
-/* .submit-background{
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    background: var(--primary-color);
-    border-radius: 5px;
-    transition: var(--transition);
-    position: relative;
-    bottom: 67px;
-    height: 0px;
-    z-index: 0;
-}
-
-.submit-btn:hover + .submit-background{
-    height: 47px;
-} */
-
-/* videon stuff */
-.showreel {
-  position: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  width: 100%;
-  background: rgb(17, 17, 17);
-}
-.showreel-video {
-  width: 50%;
-  margin: 2rem;
-  /* border-radius: 0.75rem; */
-  /* box-shadow: 0px 0px 5px 0px var(--primary-shadow); */
-}
-
+/*  */
+/* mobile changes */
+/*  */
 @media screen and (max-width: 720px) {
   /* changes reflects on screen with a width of 720px and below */
   nav {
@@ -424,65 +313,47 @@ svg {
     position: fixed;
     background-color: var(--bg-color);
     flex-direction: column;
-    top: 86px;
-    left: 10%;
-    width: 80%;
+    top: 94px;
+    right: 0;
+    width: 100%;
     text-align: center;
     transform: translateX(120%);
     transition: transform 0.5s ease-in;
   }
-
   nav ul li {
-    margin: 8px;
+    margin: 1rem;
   }
-
   .burger-menu {
     display: block;
   }
-
   nav ul.show {
     transform: translateX(0);
   }
-
-  /* .hero {
-    margin-top: -4rem;
-    flex-direction: column;
-    gap: 8rem;
-  } */
-
   .showreel {
     width: 100%;
   }
-
   .showreel-video {
     width: 85%;
   }
-
   .bio {
     margin-top: -7rem;
     width: 20.5rem;
   }
-
   .more-about {
     width: 80%;
   }
-
   .more-about h2 {
     text-align: center;
   }
-
   .more-about p {
     text-align: justify;
   }
-
   .projects-container {
     flex-direction: column;
   }
-
   .project-container {
     width: 75vw;
   }
-
   .contact-form-container {
     max-width: 85vw;
   }

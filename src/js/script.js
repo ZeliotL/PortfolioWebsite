@@ -21,10 +21,12 @@ navLink.forEach((link) =>
 
 
 function cardOverlayShow(projectPage){
-  document.getElementById("overlay").style.display = "block";
+  document.documentElement.style.overflow = "hidden";
+  document.getElementById("overlay").style.display = "flex";
   document.getElementById("overlay-embed").src = projectPage;
 }
 
 function cardOverlayHide(){
+  document.documentElement.style.overflow = "scroll";
   document.getElementById("overlay").style.display = "none";
 }
