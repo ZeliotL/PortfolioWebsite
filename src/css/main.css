@@ -76,7 +76,8 @@ video {
 }
 #overlay :last-child {
   border-radius: 15px;
-  width: 50%;
+  width: 90%;
+  max-width: 854px;
   height: 90%;
   margin: auto;
 }
@@ -356,5 +357,8 @@ nav ul {
   }
   .contact-form-container {
     max-width: 85vw;
+  }
+  #overlay :last-child{
+    width: 90%;
   }
 }
