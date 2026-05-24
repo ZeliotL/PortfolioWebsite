@@ -61,9 +61,14 @@ video{
 .video-group{
   display: flex;
   flex-direction: row;
-  width: 100%;
-  
-  height: 100%;
+  /* width: 100%;
+  max-width: 800px; */
+  height: min-content;
+  padding-bottom: 2rem;
+}
+
+.video-group:has(+.video-group){
+  padding-bottom: 0;
 }
 
 /* phone settings */
