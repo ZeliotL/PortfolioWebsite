@@ -20,6 +20,7 @@
   --paragraph-color: #9e9e9e;
   --card-bg-color: #1f1f1f;
   --card-highlight: #2c2c2c;
+  --banner-height: 120px;
 }
 
 html {
@@ -66,6 +67,8 @@ video {
 #overlay {
   position: fixed;
   display: none;
+  flex-direction: column;
+  justify-content: end;
   width: 100%; 
   height: 100%; 
   top: 0;
@@ -77,12 +80,40 @@ video {
   cursor: pointer; 
   transition: all 1s;
 }
-#overlay :last-child {
-  border-radius: 15px;
+#overlay div {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  border-radius: 15px 15px 0px 0px;
   width: 90%;
   max-width: 854px;
-  height: 90%;
-  margin: auto;
+  height: 40px;
+  margin: 2.5% auto 0;
+  background-color: var(--bg-color);
+  font-size: 1.5rem;
+  /* align-items: ; */
+  text-align: right;
+  padding: 7px;
+}
+#overlay div * {
+  padding: 0;
+  border: 0;
+  font-size: 1.1rem;
+  background: transparent;
+  height: 100%;
+}
+.cross-icon {
+  aspect-ratio: 1 / 1;
+  width: auto;
+}
+#overlay embed {
+  display: flex;
+  border-radius: 0px;
+  width: 90%;
+  max-width: 854px;
+  height: 92.5%;
+  margin: 0 auto;
+  overflow: scroll;
 }
 
 /*  */
@@ -137,6 +168,7 @@ nav ul {
   text-align: center;
   width: 100%;
   background: rgb(17, 17, 17);
+  scroll-margin-top: var(--banner-height);
 }
 .showreel-video {
   width: 50%;
@@ -148,19 +180,20 @@ nav ul {
 /*  */
 /* More about */
 /*  */
-.more-about {
+.about {
   display: block;
   background-color: var(--bg-color);
   width: 30%;
   margin: 3rem auto;
+  scroll-margin-top: var(--banner-height);
 }
 
-.more-about h2 {
+.about h2 {
   margin-bottom: var(--bottom-margin);
   text-align: center;
 }
 
-.more-about p {
+.about p {
   line-height: var(--line-height);
   padding: 0.4rem;
   text-align: center;
@@ -170,11 +203,11 @@ nav ul {
 
 
 
-
 /*  */
 /* projects */
 /*  */
 .projects {
+  scroll-margin-top: var(--banner-height);
   background-color: var(--bg-color);
   padding: 32px 0;
   /* margin-top: 2rem; */
@@ -245,6 +278,7 @@ nav ul {
 /* contact me section */
 /*  */
 .contact {
+  scroll-margin-top: var(--banner-height);
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
@@ -266,8 +300,8 @@ nav ul {
   margin: 0 auto;
   padding: 0.938rem;
   border-radius: 25px;
-  box-shadow: 0 0 20px var(--secondary-shadow);
-  border: #4e2496 1px solid;
+  /* box-shadow: 0 0 20px var(--secondary-shadow); */
+  border: var(--primary-color) 2px solid;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -317,11 +351,11 @@ nav ul {
     position: fixed;
     background-color: var(--bg-color);
     flex-direction: column;
-    top: 94px;
+    top: 0;
     right: 0;
     width: 100%;
     text-align: center;
-    transform: translateX(120%);
+    transform: translateY(-120%);
     transition: transform 0.5s ease-in;
   }
   nav ul li {
@@ -331,7 +365,7 @@ nav ul {
     display: block;
   }
   nav ul.show {
-    transform: translateX(0);
+    transform: translateY(0);
   }
   .showreel {
     width: 100%;
@@ -343,15 +377,15 @@ nav ul {
     margin-top: -7rem;
     width: 20.5rem;
   }
-  .more-about {
+  .about {
     width: 80%;
   }
-  .more-about h2 {
+  .about h2 {
     text-align: center;
   }
-  .more-about p {
+  /* .about p {
     text-align: justify;
-  }
+  } */
   .projects-container {
     flex-direction: column;
   }
@@ -361,7 +395,7 @@ nav ul {
   .contact-form-container {
     max-width: 85vw;
   }
-  #overlay :last-child{
+  #overlay embed{
     width: 90%;
   }
 }

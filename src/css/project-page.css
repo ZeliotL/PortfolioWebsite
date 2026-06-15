@@ -1,4 +1,8 @@
 
+body{
+  overflow: scroll;
+}
+
 /* project page */
 .project-page{
   /* width: 95%; */
@@ -69,6 +73,10 @@ video{
 
 .video-group:has(+.video-group){
   padding-bottom: 0;
+}
+
+.project-content img{
+  width: 100%;
 }
 
 /* phone settings */
