@@ -12,7 +12,7 @@
     <!-- about section -->
     <section class="project-about">
         <!-- primary image -->
-        <img src="/assets/images/bobatea-bigshot.jpg" alt="" class="about-image">
+        <img src="/assets/bobatea/bobatea-bigshot.jpg" alt="" class="about-image">
         <!-- title & one sentence descriptor -->
         <div class="about-details">
             <div class="about-header">
@@ -23,7 +23,7 @@
             <div class="details-container">
                 <div>
                     <h3>Tools used:</h3>
-                    <p>Unity, Blender, Substance Designer</p>
+                    <p>Unity, Blender, Substance Designer, Material Maker</p>
                 </div>
                 <div>
                     <h3>Project type & Timeframe:</h3>
@@ -39,7 +39,7 @@
         <p>
             I can work inside Unreal engine <u>and</u> Unity in a solo environment, creating systems via Blueprints, connect them to
             custom made shaders and alter parts of a model and its shaders during runtime. I can also set up cameras and cinematics
-            to showcase objects at their best. create optimized custom assets from the ground up designed for a 3D environment.
+            to showcase objects at their best. Create optimized custom assets from the ground up designed for a 3D environment.
         </p>
         <br>
         <h1>More in depth</h1>
@@ -50,18 +50,18 @@
          <i>(Unreal Engine version further down)</i>
          <p>
             I wanted to make both an Unreal and Unity version of this shader. Below you 
-            can see the Unity version that i made in my free time, It has some more advanced
+            can see the Unity version, it has some more advanced
             pearl movement and a completely shader based straw!
             <br>
          </p>
         <div class="video-group">
             <video 
-            src="/assets/videos/bobatea/bobatea_pearls_moving.mp4"
+            src="/assets/bobatea/videos/bobatea_pearls_moving.mp4"
             autoplay loop muted playsinline
             ></video>
             <video 
-            src="/assets/videos/bobatea/adjustable_straw_showcase.mp4"
-            autoplay loop muted playsinline
+            src="/assets/bobatea/videos/adjustable_straw_showcase.mp4"
+            autoplay loop muted playsinlinebob
             style="width: 80%;"
             ></video>
         </div>
@@ -69,85 +69,139 @@
         
         <!-- Unreal Engine 5 version of bobatea -->
         <h2>The Unreal Engine 5 version</h2>
-        
-        
         <p>
             The Unreal Engine 5 version was made before the Unity version. This version has a 
             realtime menu you can use to adjust the cups content and a cinemachine system that 
             allows for cinematic shots and b-rolls of the boba drink.
         </p>
-
         <img 
-        src="/assets/images/bobatea/boba_tea_scene.webp" 
+        src="/assets/bobatea/images/boba_tea_scene.webp" 
         alt=""
         loading="lazy"
         >
 
+        <!-- Configurator preview -->
+        <h3>Configurator preview</h3>
+        <p>
+            full preview of what and how you can customize the drink.<br>
+            You can spin around the cup to view it from any angle, which also moves the pearls around.
+            The menu is also interactive and when you click on a option the drink changes during runtime.
+        </p>
         <video 
-        src="/assets/videos/bobatea/shader_graph.webm"
+        src="/assets/bobatea/videos/boba_configurator.webm"
         autoplay loop muted playsinline
         loading="lazy"
         ></video>
 
-        <img 
-        src="/assets/images/bobatea/boba_actor.webp" 
-        alt=""
-        loading="lazy"
-        >
-
-        <!-- <img 
-        src="/assets/images/bobatea/boba_menu.webp" 
-        alt=""
-        loading="lazy"
-        > -->
-
+        <!-- Bobatea Shader Graph -->
+        <h3>Bobatea Shader Graph</h3>
+        <p>
+            The boba shader uses a 3D perlin noise that moves around depending on how you move the cup.
+            You can also change various variables like the height of the pearls or their overall size, 
+            there's also options to swap out textures for the sauce drizzles.
+        </p>
         <video 
-        src="/assets/videos/bobatea/boba_menu_editor.webm"
+        src="/assets/bobatea/videos/shader_graph.webm"
         autoplay loop muted playsinline
         loading="lazy"
         ></video>
-
-        <img 
-        src="/assets/images/bobatea/beginplay_quit.webp" 
-        alt=""
-        loading="lazy"
-        >
-        <img 
-        src="/assets/images/bobatea/boba_menu_button.webp" 
-        alt=""
-        loading="lazy"
-        >
-        <img 
-        src="/assets/images/bobatea/bunched_nodes.webp" 
-        alt=""
-        loading="lazy"
-        >
-        <img 
-        src="/assets/images/bobatea/dynamic_material.webp" 
-        alt=""
-        loading="lazy"
-        >
-        <img 
-        src="/assets/images/bobatea/dynamic_material_vectors.webp" 
-        alt=""
-        loading="lazy"
-        >
-        <img 
-        src="/assets/images/bobatea/mouse_interactivity.webp" 
-        alt=""
-        loading="lazy"
-        >
-        <img 
-        src="/assets/images/bobatea/slow_down_scroll.webp" 
-        alt=""
-        loading="lazy"
-        >
-        <img class="observe_this"
-        src="/assets/images/bobatea/switch_config_cinematic.webp" 
-        alt=""
-        loading="lazy"
-        >
         
+        <!-- Boba Actor -->
+        <h3>Boba Actor</h3>
+        <p>
+            The actor for the bobatea cup. It has mouse interactivity so you can spin it around
+            and it gradually slows down. It also has a dynamic runtime material which is what 
+            allows it to change colors based on what you click on the menu.
+        </p>
+        <img 
+        src="/assets/bobatea/images/boba_actor.webp" 
+        alt=""
+        loading="lazy"
+        >
+        <div class="video-group">
+            <img 
+            src="/assets/bobatea/images/dynamic_material.webp" 
+            alt=""
+            loading="lazy"
+            >
+            <img 
+            src="/assets/bobatea/images/slow_down_scroll.webp" 
+            alt=""
+            loading="lazy"
+            >
+        </div>
+        
+
+        <!-- Configurator Menu Editor -->
+        <h3>Configurator Menu Editor</h3>
+        <p>
+            The boba menu has an editor of its own where you can add more buttons and very easily
+            swap out some parameters, like name and color, to make it change the 
+            corresponding part of the boba drink.
+        </p>
+        <video 
+        src="/assets/bobatea/videos/boba_menu_editor.webm"
+        autoplay loop muted playsinline
+        loading="lazy"
+        ></video>
+        <div class="video-group">
+            <img 
+            src="/assets/bobatea/images/boba_menu_button.webp" 
+            alt=""
+            loading="lazy"
+            >
+            <img 
+            src="/assets/bobatea/images/dynamic_material_vectors.webp" 
+            alt=""
+            loading="lazy"
+            >
+        </div>
+        
+
+        <!-- dynamically adjustable straw visuals -->
+        <h3>Dynamically adjustable straw visuals</h3>
+        <p>
+            Unlike the Unity version of this project, the Unreal Engine 5 version has a blender 
+            material for the straw that is dynamically adjustable and then baked out into a texture.
+            This saves a little bit on performance but may look worse and isnt as adjustable afterwards.
+        </p>
+        <video 
+        src="/assets/bobatea/videos/boba_straw_material.webm"
+        autoplay loop muted playsinline
+        loading="lazy"
+        ></video>
+
+        <!-- Core functionality blueprints -->
+        <h3>Core functionality blueprints</h3>
+        <p>
+            Blueprints of some important core functionality like setting up dynamic materials for the boba cup,
+            connecting the menu options to that dynamic material, the functionality for the mouse to be able to click
+            and interact with the menu and drink.
+        </p>
+        <div class="video-group">
+            <img 
+            src="/assets/bobatea/images/bunched_nodes.webp" 
+            alt=""
+            loading="lazy"
+            >
+            <img 
+            src="/assets/bobatea/images/mouse_interactivity.webp" 
+            alt=""
+            loading="lazy"
+            >
+        </div>
+        <div class="video-group">
+            <img class="observe_this"
+            src="/assets/bobatea/images/switch_config_cinematic.webp" 
+            alt=""
+            loading="lazy"
+            >
+            <img 
+            src="/assets/bobatea/images/beginplay_quit.webp" 
+            alt=""
+            loading="lazy"
+            >
+        </div>
     </section>
 
     <!-- other projects -->

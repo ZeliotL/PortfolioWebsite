@@ -12,7 +12,7 @@
     <!-- about section -->
     <section class="project-about">
         <!-- primary image -->
-        <img src="/assets/images/stickerfactory-bigshot.jpg" alt="" class="about-image">
+        <img src="/assets/sticker_application/stickerfactory-bigshot.jpg" alt="" class="about-image">
         <!-- title & one sentence descriptor -->
         <div class="about-details">
             <div class="about-header">
@@ -23,7 +23,7 @@
             <div class="details-container">
                 <div>
                     <h3>Tools used:</h3>
-                    <p>Unity, Blender, Substance Designer</p>
+                    <p>Unity, Blender, Substance Designer, Substance Painter, Photoshop</p>
                 </div>
                 <div>
                     <h3>Project type & Timeframe:</h3>
@@ -41,7 +41,7 @@
             and custom shaders. Integrate them with the implemented systems and create a complete product. VR and environment
             optimization to make sure it runs smoothly.
             <br>
-            Work with premade assets then optimize and alter them for the needs of the project. create textures using substance
+            Work with premade assets then optimize and alter them for the needs of the project. Create textures using substance
             designer, substance painter and blender shaders.
         </p>
         <br>
@@ -62,19 +62,227 @@
             Most 3D models are from online sources, then altered and refined for this project. Everything else in this project
             is created entirely by me.
         </p>
-        <br>
+        <img 
+        src="/assets/sticker_application/images/unity_overview_shot.webp" 
+        alt=""
+        loading="lazy"
+        >
+
+        <!-- sticker cutter zoomed in -->
         <h3>Sticker cutter zoomed in</h3>
         <p>
-            you can see that the cutting machine actually cuts out the stickers from 
+            You can see that the cutting machine actually cuts out the stickers from 
             the sheet, and then you can take them out.
             <br>
-            it also adapts and cuts the stickers out correctly no matter the position and
+            It also adapts and cuts the stickers out correctly no matter the position and
             rotation of the sheet.
         </p>
         <video 
-        src="/assets/videos/sticker-application/cutter-zoomed-smaller.mp4"
+        src="/assets/sticker_application/videos/cutter-zoomed-smaller.mp4"
         autoplay loop muted playsinline
         ></video>
+
+        <!-- Cutting Shader -->
+        <h3>Cutting Shader</h3>
+        <p>
+            A shader is being used for the visuals of the stickers being cut out of the sheet. <br>
+            In the first video you can see how depending on which value is being set, it gradually progresses
+            how many of the stickers have been cut. There is also a value that goes from 0 to 1 to show how much 
+            each individual sticker has been cut out.<br>
+            Both of these values are changed during runtime via a C# script. The sticker cutter controls these 
+            values and moves around the sticker at the same time, giving the sense of the sticker actually being cut out.
+        </p>
+        <video 
+        src="/assets/sticker_application/videos/stickersheet_cutting_position.webm"
+        autoplay loop muted playsinline
+        loading="lazy"
+        ></video>
+        <div class="video-group">
+            <video 
+            src="/assets/sticker_application/videos/cutter_without_stickers.webm"
+            autoplay loop muted playsinline
+            loading="lazy"
+            ></video>
+            <video 
+            src="/assets/sticker_application/videos/stickersheet_gradial_cutting.webm"
+            autoplay loop muted playsinline
+            loading="lazy"
+            ></video>
+        </div>
+
+        <!-- sticker sheet states -->
+        <h3>Sticker Sheet States</h3>
+        <p>
+            The sticker sheet uses alpha cutout to remove the sticker while being cut out by the machine.
+            To avoid the sticker from vanishing the cutting machine spawns in a individual sticker which is then
+            able to get take off from the sheet.
+        </p>
+        <video 
+        src="/assets/sticker_application/videos/stickersheet_hole_states.webm"
+        autoplay loop muted playsinline
+        loading="lazy"
+        ></video>
+        <p>
+            The cutter shader also needs to orient itself to the cutting machine so when it moves around each sticker, 
+            the sheet also removes the gradual cutout in the right position.
+        </p>
+        <video 
+        src="/assets/sticker_application/videos/stickersheet_shader_orientation.webm"
+        autoplay loop muted playsinline
+        loading="lazy"
+        ></video>
+
+
+        <!-- Sticker Cutting Machine Overview -->
+        <h3>Sticker Cutting Machine Overview</h3>
+        <p>
+            The sticker cutter is a huge part of this project and works alongside many of the other components to 
+            cut out stickers from sheets and make them separate so the user can pick them out of the sheet afterwards.
+        </p>
+        <img 
+        src="/assets/sticker_application/images/unity_cutter_shot.webp" 
+        alt=""
+        loading="lazy"
+        >
+        <!-- Cutter Display -->
+        <h3>Cutter Display</h3>
+        <p>
+            The display shows relevant information to the user for what state the machine is in. <br>
+            These states are mostly pretty obvious but "wrong placement" exists because the cutting 
+            machine checks if the paper sheet is properly within its cutting area or not.
+        </p>
+        <video 
+        src="/assets/sticker_application/videos/cutter_display_shader.webm"
+        autoplay loop muted playsinline
+        loading="lazy"
+        ></video>
+        <div class="video-group">
+            <video 
+            src="/assets/sticker_application/videos/cutter_display.webm"
+            autoplay loop muted playsinline
+            loading="lazy"
+            ></video>
+            <img 
+            src="/assets/sticker_application/images/photoshop.webp" 
+            alt=""
+            loading="lazy"
+            >
+        </div>
+        <!-- Cutter Lamp -->
+        <h3>Cutter Lamp</h3>
+        <p>
+            The red lamp on the cutting machine idicates to the user that the machine is active when turned on.
+            To give it a little bit more visual flare i made a shader for it with psuedo randomness to make it 
+            flicker every now and then. 
+        </p>
+        <video 
+        src="/assets/sticker_application/videos/cutter_blinking_shader.webm"
+        autoplay loop muted playsinline
+        loading="lazy"
+        ></video>
+        
+        <!-- Delivery box -->
+        <h3>Delivery Box</h3>
+        <p>
+            The delivery box has two states: closed and open. When its open you can put items inside of it, 
+            when you close it, the contents and the open box mesh gets hidden and the closed box is turned on.
+            When you open it again, the process is reversed and the box can be filled with more stickers.
+        </p>
+        <video 
+        src="/assets/sticker_application/videos/deliverybox.webm"
+        autoplay loop muted playsinline
+        loading="lazy"
+        ></video>
+        <!-- Printer -->
+        <h3>Printer</h3>
+        <p>
+            The printer changes the state of the sticker sheet to add the stickers. The sheet is never actually 
+            modified and its only a simple variable change in its shader. To give the illusion of it being printed out, 
+            the sheet sticks out from the machine on the backside, this is never visible for the user so it works 
+            perfectly without unecessary functionality to keep it within the printer at all times.
+        </p>
+        <video 
+        src="/assets/sticker_application/videos/printer.webm"
+        autoplay loop muted playsinline
+        loading="lazy"
+        ></video>
+        <!-- Scanner -->
+        <h3>Scanner</h3>
+        <p>
+            The scanner can scan barcodes, they appear on the sticker sheets to indicate which order it is, 
+            and also on the delivery receipts for easy handling of which order it belongs to.
+        </p>
+        <video 
+        src="/assets/sticker_application/videos/barcode_scanner.webm"
+        autoplay loop muted playsinline
+        loading="lazy"
+        ></video>
+
+        <!-- Blender scene -->
+        <h3>Blender Scene</h3>
+        <p>
+            This is the blender scene where i kept all of the models for the project. Here i modifies them 
+            for my needs by altering the mesh itself, adding or changing textures, optimizing and removing 
+            unecessary parts to keep everything running smoothly.
+        </p>
+        <img 
+        src="/assets/sticker_application/images/blender_overview.webp" 
+        alt=""
+        loading="lazy"
+        >
+        <div class="video-group">
+            <img 
+            src="/assets/sticker_application/images/blender_cutter.webp" 
+            alt=""
+            loading="lazy"
+            >
+            <img 
+            src="/assets/sticker_application/images/blender_office.webp" 
+            alt=""
+            loading="lazy"
+            >
+        </div>
+        <div class="video-group">
+            <img 
+            src="/assets/sticker_application/images/blender_packages.webp" 
+            alt=""
+            loading="lazy"
+            >
+            <img 
+            src="/assets/sticker_application/images/blender_scanner.webp" 
+            alt=""
+            loading="lazy"
+            >
+        </div>
+
+        <!-- Cutting Machine Textures -->
+        <h3>Cutting Machine Textures</h3>
+        <p>
+            I Created a dynamic metallic material for the metallic parts of the cutting machine. It's then 
+            baked out as a texture to be used within Unity. I also used Substance Designer and Painter to 
+            create the green cutting pad for the machine. Substance Designer was used for the main grid, then 
+            in Substance Painter i created the other measurement lines as needed.
+        </p>
+        <img 
+        src="/assets/sticker_application/images/metal_material.webp" 
+        alt=""
+        loading="lazy"
+        >
+        <div class="video-group">
+            <img 
+            src="/assets/sticker_application/images/substance_designer_cutter.webp" 
+            alt=""
+            loading="lazy"
+            >
+            <img 
+            src="/assets/sticker_application/images/substance_designer.webp" 
+            alt=""
+            loading="lazy"
+            >
+        </div>
+        
+        
+
     </section>
 
     <!-- other projects -->

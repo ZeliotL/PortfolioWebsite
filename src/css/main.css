@@ -181,11 +181,36 @@ nav ul {
 /* More about */
 /*  */
 .about {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-color: var(--bg-color);
   width: 30%;
   margin: 3rem auto;
   scroll-margin-top: var(--banner-height);
+  /* overflow: scroll; */
+}
+
+.about div img{
+  max-width: inherit;
+  border-radius: inherit;
+}
+
+.about div{
+  position: relative;
+  /* box-sizing: border-box;
+  -moz-box-sizing: border-box; */
+  max-width: 350px;
+  margin-bottom: 2rem;
+  border-radius: 20%;
+  &::before {
+    border-radius: inherit;
+    content: ' ';
+    position: absolute;
+    left: 0; top: 0px;
+    width: 100%; height: 99%;
+    box-shadow: inset 0 0 0px 1px #ffffff1f;
+  }
 }
 
 .about h2 {
@@ -248,23 +273,29 @@ nav ul {
 }
 
 .project-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-color: var(--card-bg-color);
   border-radius: 11px;
   box-shadow: 0 5px 15px var(--primary-shadow);
   padding: 20px;
   margin: 10px;
   border: var(--card-highlight) 1px solid;
+  align-self: stretch;
 }
 .project-button {
   width: 100%;
   padding: 10px;
-  margin: 10px 0;
+  /* margin: 10px 0px; */
+  margin-bottom: 0px;
+  margin-top: auto;
   border: 2px solid var(--primary-color);
   border-radius: 5px;
   font-size: 1rem;
   font-weight: var(--bold-font);
   transition: var(--transition);
-  z-index: 10;
+  /* z-index: 10; */
 }
 .project-button:hover {
   background: var(--primary-color);
@@ -391,6 +422,10 @@ nav ul {
   }
   .project-container {
     width: 75vw;
+  }
+  .project-card{
+    align-self: center;
+    
   }
   .contact-form-container {
     max-width: 85vw;
