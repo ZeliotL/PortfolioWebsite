@@ -215,6 +215,7 @@ nav ul {
 
 .about h2 {
   margin-bottom: var(--bottom-margin);
+  margin-top: var(--bottom-margin-2);
   text-align: center;
 }
 
@@ -222,6 +223,10 @@ nav ul {
   line-height: var(--line-height);
   padding: 0.4rem;
   text-align: center;
+}
+
+.about p:has(+ h2){
+  margin-bottom: 1rem;
 }
 
 
